@@ -12,9 +12,7 @@ import android.widget.Toast;
 public class Player extends AppCompatActivity {
 
     TextView songName,albumName;
-    ImageView songImage;
     Button back;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +23,6 @@ public class Player extends AppCompatActivity {
         back = findViewById(R.id.back);
         songName = findViewById(R.id.song_name_textview);
         albumName = findViewById(R.id.album_name_textview);
-        songImage = findViewById(R.id.song_imageview);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +33,5 @@ public class Player extends AppCompatActivity {
         });
         songName.setText(received.getSongName());
         albumName.setText(received.getAlbum());
-        songImage.setImageDrawable(received.getImg());
-
     }
 }

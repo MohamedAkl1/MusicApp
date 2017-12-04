@@ -24,11 +24,6 @@
         android:textSize="24sp"
         android:id="@+id/album_name_textview"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:adjustViewBounds="true"
-        android:layout_height="wrap_content"
-        android:id="@+id/song_imageview"/>
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

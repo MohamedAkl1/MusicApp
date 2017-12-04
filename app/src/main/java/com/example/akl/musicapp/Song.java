@@ -12,20 +12,10 @@ import java.io.Serializable;
 
 public class Song implements Parcelable{
     private String songName,album;
-    private Drawable img;
 
-    Song(String name, String album, Drawable img){
+    Song(String name, String album){
         this.album = album;
         this.songName = name;
-        this.img = img;
-    }
-
-    public Drawable getImg() {
-        return img;
-    }
-
-    public void setImg(Drawable img) {
-        this.img = img;
     }
 
     protected Song(Parcel in) {

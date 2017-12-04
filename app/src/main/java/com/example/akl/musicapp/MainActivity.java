@@ -1,14 +1,12 @@
 package com.example.akl.musicapp;
 
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list_view_layout);
         final ArrayList<Song> songs = new ArrayList<>();
 
-        songs.add(new Song("Fix You","X&Y (2005)", ContextCompat.getDrawable(getApplicationContext(),R.drawable.x_y)));
-        songs.add(new Song("Magic","Ghost Stories (2014)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.ghost_stories)));
-        songs.add(new Song("Yellow","Parachutes (2000)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.parachutes)));
-        songs.add(new Song("God Put A Smile Upon Your Face","A Rush Of Blood To The Head (2002)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.a_rush_of_blood_to_the_head)));
-        songs.add(new Song("The Scientist","A Rush Of Blood To The Head (2002)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.a_rush_of_blood_to_the_head)));
-        songs.add(new Song("Every Teardrop Is A Waterfall","Mylo Xyloto (2011)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.mylo_xyloto)));
-        songs.add(new Song("Paradise","Mylo Xyloto (2011)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.mylo_xyloto)));
-        songs.add(new Song("Everglow","A Head Full Of Dreams (2015)",ContextCompat.getDrawable(getApplicationContext(),R.drawable.ahfod)));
+        songs.add(new Song(getString(R.string.fix_you),getString(R.string.xy_album)));
+        songs.add(new Song(getString(R.string.magic),getString(R.string.ghost_stories_album)));
+        songs.add(new Song(getString(R.string.yellow),getString(R.string.parachutes_album)));
+        songs.add(new Song(getString(R.string.gpasoyf),getString(R.string.arobtth_album)));
+        songs.add(new Song(getString(R.string.the_scientist),getString(R.string.arobtth_album)));
+        songs.add(new Song(getString(R.string.etdisw),getString(R.string.mx_album)));
+        songs.add(new Song(getString(R.string.paradise),getString(R.string.mx_album)));
+        songs.add(new Song(getString(R.string.everglow),getString(R.string.ahfod_album)));
 
         SongsAdapter arrayAdapter = new SongsAdapter(this,songs);
         listView.setAdapter(arrayAdapter);
